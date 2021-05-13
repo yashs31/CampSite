@@ -47,7 +47,10 @@ app.use("/",indexRoutes);
 app.use("/campgrounds",campgroundRoutes);   //removes all /campgrounds in the campgrounds routes as this statement will append it to all routes in campgrounds
 app.use("/campgrounds/:id/comments",commentRoutes);
 
+// app.listen(3000, function () {
+//     console.log("YelpCamp server has started");
+// });
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("YelpCamp server has started");
 });
